@@ -1,8 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-
 import 'package:flutter_template/common/extensions/context_extension.dart';
 import 'package:flutter_template/data/models/post_model.dart';
 
@@ -66,7 +62,6 @@ class TagsSelection extends StatelessWidget {
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (_, index) {
-                  log('hehe');
                   return GestureDetector(
                     behavior: HitTestBehavior.opaque,
                     onTap: () {
@@ -75,7 +70,6 @@ class TagsSelection extends StatelessWidget {
                       } else {
                         tags.add(existingTags[index]);
                       }
-                      log(tags.toString());
                       updateTagsSelection(tags);
                     },
                     child: TagItem(

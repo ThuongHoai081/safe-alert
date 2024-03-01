@@ -1,6 +1,4 @@
-import 'dart:developer';
 import 'dart:io';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
@@ -18,7 +16,6 @@ class ImagesBloc extends Bloc<ImagesEvent, ImagesState> {
   void _uploadNewImage(UploadNewImageEvent event, Emitter<ImagesState> emit) {
     if (state.images != null && state.images!.isEmpty) {
       emit(state.copyWith(images: [...state.images!, event.newImage]));
-      log(state.images.toString());
     }
   }
 }

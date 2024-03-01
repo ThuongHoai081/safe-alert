@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -63,10 +61,7 @@ class _HomeViewState extends State<HomeView> {
               buildWhen: (previous, current) =>
                   previous.emergencyCases != current.emergencyCases,
               builder: (context, state) {
-                emergencyCases =
-                    BlocProvider.of<ManageEmergencyCaseBloc>(context)
-                        .state
-                        .emergencyCases;
+                emergencyCases = state.emergencyCases;
                 return MapView(
                   emergencyCases: emergencyCases,
                 );

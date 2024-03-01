@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,7 +5,6 @@ import 'package:flutter_template/common/extensions/context_extension.dart';
 import 'package:flutter_template/data/datasources/user/user_mock.dart';
 import 'package:flutter_template/data/models/post_model.dart';
 import 'package:flutter_template/data/models/user_model.dart';
-import 'package:flutter_template/generated/assets.gen.dart';
 import 'package:flutter_template/presentation/emergency/widgets/images_upload/images_input.dart';
 import 'package:flutter_template/presentation/posts/bloc/post_bloc.dart';
 import 'package:flutter_template/presentation/posts/widgets/new_post/tags_selection.dart';
@@ -117,7 +115,6 @@ class _CreatePostFieldState extends State<CreatePostField> {
       description: _postContentController.text,
       tags: tags,
     );
-    log(newPost.toString());
     BlocProvider.of<PostBloc>(context).add(UploadNewPost(newPost: newPost));
     await showDialog(
       context: context,

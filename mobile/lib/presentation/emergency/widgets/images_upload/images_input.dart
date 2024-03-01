@@ -1,5 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first, use_key_in_widget_constructors
-import 'dart:developer';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -83,8 +81,6 @@ class ImageInputView extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemCount: imageFiles.length,
                   itemBuilder: (_, index) {
-                    log('imageFiles: $imageFiles');
-
                     return Image.file(
                       imageFiles[index],
                       fit: BoxFit.cover,
