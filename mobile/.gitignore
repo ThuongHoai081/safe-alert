@@ -56,6 +56,3 @@ mason-lock.json
 .env.qa
 .env.staging
 **/config.json
-
-#firebase
-google-services.json
